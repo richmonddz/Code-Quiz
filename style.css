@@ -1,88 +1,131 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  background-color: rgb(224, 233, 253);
+  font-family: "Press Start 2P", cursive;
 }
-body {
-  background: #007bff;
+li {
+  padding-bottom: 3px;
+  color: white;
+  text-shadow: 1.5px 1px 3px black;
+  list-style-type: none;
 }
-::selection {
-  color: #fff;
-  background-color: #007bff;
-}
-.start-btn,
-.test-box,
-.score {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.start-btn {
-  font-size: 25px;
-  font-weight: 500;
-  color: #007bff;
-  padding: 15px 30px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  background: #fff;
-  cursor: pointer;
-}
-.test-box {
-  width: 550px;
-  background: #fff;
-  border-radius: 5px;
-  transform: translate(-50%, -50%) scale(0.9);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.test-box header {
-  position: relative;
-  z-index: 2;
-  height: 70px;
-  padding: 0 30px;
-  background: #fff;
-  border-radius: 5px 5px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
-}
-.test-box header .timer {
-  font-size: 20px;
-  font-weight: 600;
-}
-.test-box header .timer {
-  color: #004085;
-  background: #cce5ff;
-  border: 1px solid #b8daff;
-  height: 45px;
-  padding: 0 8px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 145px;
-}
-.test-box header .timer .time-left {
-  font-weight: 400;
-  font-size: 17px;
-  user-select: none;
-}
-.test-box header .timer .timer-seconds {
-  font-size: 18px;
-  font-weight: 500;
-  height: 30px;
-  width: 45px;
-  color: #fff;
-  border-radius: 5px;
-  line-height: 30px;
+
+p {
+  color: black;
+  text-shadow: 0.5px 0.5px white;
   text-align: center;
-  background: #343a40;
-  border: 1px solid #343a40;
-  user-select: none;
+  font-size: xx-large;
+}
+h2 {
+  margin-top: -0.5rem;
+}
+input {
+  text-align: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+button {
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  border: 4px double black;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 200px;
+  margin-top: 3px;
+}
+
+button:hover {
+  box-shadow: 4px 3px 6px black;
+}
+
+#letsgo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timer {
+  background-color: white;
+  color: black;
+  font-size: x-large;
+  text-shadow: 0.5px 0.5px black;
+  text-align: center;
+}
+#quiz {
+  display: none;
+}
+
+#result {
+  display: none;
+}
+
+#gameover {
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#highScore {
+  height: 1.5rem;
+  border: groove 2px;
+}
+#highscorePage {
+  display: none;
+  width: 50%;
+  border: solid;
+  border-color: silver;
+  border-bottom-style: groove;
+  padding-bottom: 0.3rem;
+  background: lightsteelblue;
+}
+
+#highscoreheader {
+  display: flex;
+  justify-content: space-around;
+  border-bottom-style: outset;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  color: black;
+}
+#highscorebox {
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#initials {
+  margin: 0.5rem;
+  height: 1.75rem;
+}
+
+#highscore-initials {
+  display: inline-block;
+  padding-left: 9.5rem;
+  font-weight: bold;
+}
+
+#highscore-user {
+  float: right;
+  padding-right: 8.75rem;
+  font-weight: bold;
+}
+
+#finalScore {
+  padding-bottom: 0.5rem;
+  font-size: x-large;
+  font-weight: bold;
 }

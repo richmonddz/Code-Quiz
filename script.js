@@ -56,3 +56,11 @@ var questions = [
     options: ["Ash", "Asher", "Ashley", "Ashy Knees"],
   },
 ];
+const start_btn = document.querySelector("start_btn");
+const test_box = document.querySelector("test_box");
+const time_left = document.querySelector("time_left");
+const timer_seconds = document.querySelector("timer_seconds");
+const test_questions = document.querySelector("test_questions");
+const test_mp = document.querySelector("test_mp");
+
+start_btn.onclick = () => {};

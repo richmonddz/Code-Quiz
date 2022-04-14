@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokemon Quiz!!</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="start-btn"><button>Start Quiz</button></div>
-
-    <div class="test-box">
-      <header>
-        <div class="test-title">Are you a 90's era Pokemon fan?! Lets find out!</div>
-        <div class="timer"</div>
-          <div class="time-left">Time Remianing</div>
-          <div class="timer-seconds">15</div>
-        </div>
-      </header>
-      <section>
-        <div class="test-question">
-
-        </div>
-        <div class="test-mp">
-
-        </div>
-      </section>
-      <footer>
-        <div class="score"</div>
-      </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Pokemon Quiz!</title>
+</head>
+<body>
+  <div class="container">
+    <div class="start">
+      <h2>Are you a Pokemon fan? Lets find out!</h2>
+      <button id="letsgo">Start Journey (Start)</button>
+      <button id="highscore" onclick="revealhighscore()">High Score</button>
     </div>
-  <script src="script.js"></script>
-  </body>
+    <div id="quiz">
+      <div id="timer">Time Remaining: </div>
+      <div id="questions"><p>Questions</p></div>
+      <button id="A" onclick="checkAnswer('A')">A</button>
+      <button id="B" onclick="checkAnswer('A')">B</button>
+      <button id="C" onclick="checkAnswer('A')">C</button>
+      <button id="D" onclick="checkAnswer('A')">D</button>
+      <div id="result"></div>
+    </div>
+    <div id="gameover">
+      <input type="text" size="40" placeholder="Enter your initals to leave your mark at the Indigo Plateau" name="intials" id="initials"/>
+      <button id="submitscore">I beat the elite 4</button>
+    </div>
+    <div id="highscorebox">
+      <div id="highscorepage">
+        <div id="highscoreheader">
+          <h3>Initals</h3>
+          <h3>Score</h3>
+        </div>
+        <div id = "highscore-initials"></div>
+            <div id = "highscore-score"></div>
+<script src="script.js"></script>
+</body>
 </html>
