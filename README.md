@@ -3,3 +3,5 @@ Welcome to my Pokemon Quiz! This is a timed quiz and you only have 60 seconds to
 To start the quiz you will have to click on the "Start Journey" button and it will populate the first quiz question and initiate the countdown timer. You will be given 4 answer choices for each question. The quiz will end when either all 8 questions are answered or the timer runs out. At the end of the quiz you will be prompted to input your initals to add them to the highscore board.
 
 https://richmonddz.github.io/Code-Quiz/
+
+![alt text](https://github.com/richmonddz/Code-Quiz/blob/main/Screen%20Shot%202022-04-16%20at%2011.34.02%20PM.png)
