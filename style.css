@@ -35,7 +35,7 @@ button {
   display: inline-block;
   background-color: white;
   border-radius: 10px;
-  border: 4px double black;
+  border: 5px double black;
   color: black;
   text-align: center;
   font-size: 15px;
@@ -63,6 +63,9 @@ button:hover {
 }
 #quiz {
   display: none;
+  border-radius: 10px;
+  border: 8px double black;
+  color: black;
 }
 
 #result {

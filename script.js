@@ -118,7 +118,7 @@ function starttheQuiz() {
   pullQuestions();
   timetick = setInterval(function () {
     timeremain--;
-    quiztimer.textContent = "Time Remaining" + timeremain;
+    quiztimer.textContent = "Time Remaining: " + timeremain;
     if (timeremain === 0) {
       clearInterval(timeremain);
       showsthescore();
@@ -131,7 +131,7 @@ function showsthescore() {
   itsgameover.style.display = "flex";
   clearInterval(timetick);
   hsinitials.value = "";
-  thefinalscore.innerHTML = "Congrats on " + questions.length;
+  finalscore.innerHTML = "Your Score: " + questions.length;
 }
 submitscorebtn.addEventListener("click", function highscore() {
   if (hsinitials.value === "") {
