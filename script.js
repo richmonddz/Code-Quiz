@@ -115,8 +115,6 @@ function pullQuestions() {
   btnD.innerHTML = mainquestion.optD;
 }
 function starttheQuiz() {
-  itsgameover.style.display = "none";
-  startquiz.style.display = "none";
   pullQuestions();
   timetick = setInterval(function () {
     timeremain--;
@@ -152,7 +150,7 @@ submitscorebtn.addEventListener("click", function revealhighscore() {
     endGameBtns.style.display = "flex";
 
     quicksave.push(mainhs);
-    localStorage.setItem("highscore1", JSON.stringify(highscore1));
+    localStorage.setItem("highscore1", JSON.stringify(quicksave));
     generateHighscores();
   }
 });
@@ -170,8 +168,6 @@ function generateHighscores() {
   }
 }
 function showHighscore() {
-  startquiz.style.display = "none";
-  gameoverdiv.style.display = "none";
   highscorebox.style.display = "flex";
   highscorediv.style.display = "block";
   endGameBtns.style.display = "flex";
@@ -184,8 +180,6 @@ function clearhs() {
   highscoredisplayscore.textContent = "";
 }
 function tryagain() {
-  highscorebox.style.display = "none";
-  gameoverdiv.style.display = "none";
   startquiz.style.display = "flex";
   timeremain = 60;
   score = 0;
