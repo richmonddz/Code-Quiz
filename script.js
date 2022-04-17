@@ -97,7 +97,7 @@ var btnC = document.getElementById("C");
 var btnD = document.getElementById("D");
 var lastquestion = questions.length;
 var statusquestion_i = 0;
-var timeremain = 30;
+var timeremain = 60;
 var timetick;
 var score = 0;
 var correct;
@@ -105,7 +105,7 @@ var correct;
 function pullQuestions() {
   itsgameover.style.display = "none";
   if (statusquestion_i === lastquestion) {
-    return revealhighscore();
+    return showthescore();
   }
   var mainquestion = questions[statusquestion_i];
   thequestions.innerHTML = "<p>" + mainquestion.question + "<p>";
@@ -115,25 +115,27 @@ function pullQuestions() {
   btnD.innerHTML = mainquestion.optD;
 }
 function starttheQuiz() {
+  itsgameover.style.display = "none";
+  startquiz.style.display = "none";
   pullQuestions();
   timetick = setInterval(function () {
     timeremain--;
     quiztimer.textContent = "Time Remaining: " + timeremain;
     if (timeremain === 0) {
       clearInterval(timeremain);
-      showsthescore();
+      showthescore();
     }
   }, 1000);
   thequiz.style.display = "block";
 }
-function showsthescore() {
+function showthescore() {
   thequiz.style.display = "none";
   itsgameover.style.display = "flex";
   clearInterval(timetick);
   hsinitials.value = "";
   finalscore.innerHTML = "Your Score: " + questions.length;
 }
-submitscorebtn.addEventListener("click", function highscore() {
+submitscorebtn.addEventListener("click", function revealhighscore() {
   if (hsinitials.value === "") {
     alert("Please enter a valid input");
     return false;
@@ -150,7 +152,7 @@ submitscorebtn.addEventListener("click", function highscore() {
     endGameBtns.style.display = "flex";
 
     quicksave.push(mainhs);
-    localStorage.setItem("mainhs", JSON.stringify(mainhs));
+    localStorage.setItem("highscore1", JSON.stringify(highscore1));
     generateHighscores();
   }
 });
@@ -167,12 +169,12 @@ function generateHighscores() {
     highscoredisplayscore.appendChild(newscore);
   }
 }
-function revealhighscore() {
+function showHighscore() {
   startquiz.style.display = "none";
   gameoverdiv.style.display = "none";
-  highscorebox.style.display = "none";
+  highscorebox.style.display = "flex";
   highscorediv.style.display = "block";
-  endGameBtns.style.display = "block";
+  endGameBtns.style.display = "flex";
 
   generateHighscores();
 }
@@ -185,7 +187,7 @@ function tryagain() {
   highscorebox.style.display = "none";
   gameoverdiv.style.display = "none";
   startquiz.style.display = "flex";
-  timeremain = 30;
+  timeremain = 60;
   score = 0;
   statusquestion_i = 0;
 }
@@ -194,14 +196,16 @@ function checkAnswer(answer) {
   if (answer === correct && statusquestion_i !== lastquestion) {
     alert("Correct!! Its Super Effective");
     statusquestion_i++;
+    finalscore += 1;
     pullQuestions();
   } else if (answer !== correct && statusquestion_i !== lastquestion) {
     alert("Wrong!! Not Very Effective");
     statusquestion_i++;
     timeremain -= 5;
+    finalscore -= 1;
     pullQuestions();
   } else {
-    showsthescore();
+    showthescore();
   }
 }
 
