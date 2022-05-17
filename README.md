@@ -19,7 +19,7 @@ To start the quiz you will have to click on the "Start Journey" button and it wi
 
 https://richmonddz.github.io/Code-Quiz/
 
-![alt text](https://github.com/richmonddz/Code-Quiz/blob/main/Screen%20Shot%202022-04-16%20at%2011.34.02%20PM.png)
+![alt text](https://github.com/richmonddz/Code-Quiz/blob/main/quizzz.gif)
 
 # License
 
